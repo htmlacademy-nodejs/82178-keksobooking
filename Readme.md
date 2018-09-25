@@ -1,7 +1,7 @@
 # Личный проект «Кексобукинг» [![Build status][travis-image]][travis-url]
 
 * Студент: [Кирилл Костиков](https://up.htmlacademy.ru/nodejs/2/user/82178).
-* Наставник: `Неизвестно`.
+* Наставник: [Даниил Оношко](https://up.htmlacademy.ru/nodejs/2/user/154426).
 
 ---
 
