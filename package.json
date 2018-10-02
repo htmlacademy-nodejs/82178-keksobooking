@@ -2,7 +2,7 @@
   "name": "keksobooking",
   "version": "1.0.0",
   "description": "* Студент: [Кирилл Костиков](https://up.htmlacademy.ru/nodejs/2/user/82178). * Наставник: [Даниил Оношко](https://up.htmlacademy.ru/nodejs/2/user/154426).",
-  "main": "index.js",
+  "main": "./src/index.js",
   "scripts": {
     "test:lint": "eslint .",
     "test": "npm run test:lint"
