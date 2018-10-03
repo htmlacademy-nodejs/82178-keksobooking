@@ -2,7 +2,7 @@
 const {author} = require(`../../package.json`);
 
 // Utils
-const print = require(`../utils/print`);
+const {print} = require(`../utils/print`);
 
 module.exports = {
   name: `author`,

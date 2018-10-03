@@ -1,16 +1,26 @@
+const colors = require(`colors`);
+
 // Utils
 const {print} = require(`../utils/print`);
+const reduceMap = require(`../utils/reduceMap`);
 
 module.exports = {
   name: `help`,
   description: `Выводит список доступных команд приложения`,
   execute() {
-    print(`Доступные команды:
-    --author      - выводит автора.
-    --description - выводит описание.
-    --license     - выводит тип лицензии.
-    --version     - выводит версию.
-    --help        - выводит справку.`
-    );
+    const commandsMap = new Map([
+      [`--author`, `Выводит автора.`],
+      [`--description`, `Выводит описание.`],
+      [`--license`, `Выводит тип лицензии.`],
+      [`--version`, `Выводит версию.`],
+      [`--help`, `Выводит справку.`]
+    ]);
+
+    const commandListMessage = reduceMap(commandsMap,
+        (acc, description, command) => (
+          `${acc}${`${command}`.grey} - ${`${description}`.green}\n`
+        ), ``);
+
+    print(`Доступные команды:\n${commandListMessage}`);
   }
 };
