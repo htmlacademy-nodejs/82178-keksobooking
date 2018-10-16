@@ -1,4 +1,4 @@
-const colors = require(`colors`);
+require(`colors`);
 
 // Data
 const {version} = require(`../../package.json`);

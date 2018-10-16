@@ -1,8 +1,8 @@
-const colors = require(`colors`);
+require(`colors`);
 
 // Utils
 const {print} = require(`../utils/print`);
-const reduceMap = require(`../utils/reduceMap`);
+const reduceMap = require(`../utils/reduce-map`);
 
 module.exports = {
   name: `help`,
@@ -16,10 +16,12 @@ module.exports = {
       [`--help`, `Выводит справку.`]
     ]);
 
-    const commandListMessage = reduceMap(commandsMap,
-        (acc, description, command) => (
-          `${acc}${`${command}`.grey} - ${`${description}`.green}\n`
-        ), ``);
+    const commandListMessage = reduceMap(
+        commandsMap,
+        (acc, description, command) =>
+          `${acc}${`${command}`.grey} - ${`${description}`.green}\n`,
+        ``
+    );
 
     print(`Доступные команды:\n${commandListMessage}`);
   }
