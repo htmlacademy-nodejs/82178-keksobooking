@@ -1,3 +1,7 @@
+const print = (message) => console.log(message);
+const printError = (message) => console.error(message);
 
-exports.print = (message) => console.log(message);
-exports.printError = (message) => console.error(message);
+module.exports = {
+  print,
+  printError
+};
